@@ -221,6 +221,8 @@ GameObject:
   - component: {fileID: 1236005236}
   - component: {fileID: 1236005235}
   - component: {fileID: 1236005240}
+  - component: {fileID: 1236005241}
+  - component: {fileID: 1236005242}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -345,7 +347,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236005234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.46, y: -0.45, z: 0}
+  m_LocalPosition: {x: -4, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -371,6 +373,34 @@ MonoBehaviour:
   rightAni: PlayerRight
   deadAni: PlayerDead
   angleZ: -90
+--- !u!114 &1236005241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236005234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b540c99d68a88c64db13b67017dec094, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootSpeed: 12
+  shootDelay: 0.25
+  bowPrefab: {fileID: 3132660952980340139, guid: 4fccb2224a8404641a3d48153dae8e3b, type: 3}
+  arrowPrefab: {fileID: 132255747021574168, guid: 4f31ae04905728345afa08975a0c8d03, type: 3}
+--- !u!114 &1236005242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236005234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05a12b09aee076f4c9975030717ebb62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1921655511
 GameObject:
   m_ObjectHideFlags: 0

@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
     {
         if(ismoving == false)
         {
+            
             axisH = Input.GetAxisRaw("Horizontal");
             axisV = Input.GetAxisRaw("Vertical");
         }
@@ -47,23 +48,27 @@ public class PlayerController : MonoBehaviour
         Vector2 toPt = new Vector2(fromPt.x+axisH, fromPt.y+axisV);//¿òÁ÷ÀÓ
 
         angleZ = GetAngle(fromPt, toPt);
-        Debug.Log(angleZ);
+        
 
         if (angleZ >= -45 && angleZ < 45)
         {
             nowAni = rightAni;
+            
         }
         else if(angleZ >= 45 && angleZ <=135)
         {
             nowAni = upAni;
+            
         }
         else if (angleZ >= -135 && angleZ <= -45)
         {
             nowAni = downAni;
+            
         }
         else
         {
             nowAni = leftAni;
+            
         }
 
 
