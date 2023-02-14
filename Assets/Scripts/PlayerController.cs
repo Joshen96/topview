@@ -45,9 +45,9 @@ public class PlayerController : MonoBehaviour
         }
 
         Vector2 fromPt = this.transform.position;
-        Vector2 toPt = new Vector2(fromPt.x+axisH, fromPt.y+axisV);//움직임
+        Vector2 toPt = new Vector2(fromPt.x+axisH, fromPt.y+axisV);//움직이는 각도구하기위한
 
-        angleZ = GetAngle(fromPt, toPt);
+        angleZ = GetAngle(fromPt, toPt);  //각도 구함
         
 
         if (angleZ >= -45 && angleZ < 45)
@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rBody.velocity = new Vector2(axisH, axisV) * speed;
+        rBody.velocity = new Vector2(axisH, axisV) * speed;  //실제이동 부분
         
     }
 

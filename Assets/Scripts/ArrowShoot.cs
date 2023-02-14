@@ -56,7 +56,7 @@ public class ArrowShoot : MonoBehaviour
             inAttack = true;
 
             PlayerController player = GetComponent<PlayerController>();
-            float angleZ = player.angleZ;
+            float angleZ = player.angleZ; //플레이어의 각의정보 
 
             Quaternion r = Quaternion.Euler(0, 0, angleZ);
             GameObject arrowOj = Instantiate(arrowPrefab, transform.position, r);
@@ -66,10 +66,10 @@ public class ArrowShoot : MonoBehaviour
             float y = Mathf.Sin(angleZ * Mathf.Deg2Rad); //
 
 
-            Vector3 vFly = new Vector3(x, y,0)*shootSpeed;
+            Vector3 vFly = new Vector3(x, y,0)*shootSpeed; //벡터정보
 
             Rigidbody2D rbody = arrowOj.GetComponent<Rigidbody2D>();
-            rbody.AddForce(vFly, ForceMode2D.Impulse);
+            rbody.AddForce(vFly, ForceMode2D.Impulse);  
 
             Invoke("stopAttack", shootDelay);
         }
