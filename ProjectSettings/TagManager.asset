@@ -7,6 +7,8 @@ TagManager:
   - Arrow
   - Exit
   - Enemy
+  - Item
+  - ItemBox
   layers:
   - Default
   - TransparentFX
