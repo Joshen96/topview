@@ -125,7 +125,26 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    public void SetAxisZero()
+    {
+        axisH = 0.0f;
+        axisV = 0.0f;
+        ismoving = false;
+    }
 
+    public void SetAxis(float axisX, float axisY)
+    {
+        axisH = axisX;
+        axisV = axisY;
+        if (axisH == 0 && axisV == 0)
+        {
+            ismoving = false;
+        }
+        else
+        {
+            ismoving = true;
+        }
+    }
     float GetAngle(Vector2 p1, Vector2 p2)  //각구하는함수
     {
         float angle = angleZ;
