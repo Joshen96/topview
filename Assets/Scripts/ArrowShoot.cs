@@ -55,6 +55,8 @@ public class ArrowShoot : MonoBehaviour
             ItemKeeper.hasArrows -= 1;
             inAttack = true;
 
+            SoundManager.soundManager.SEPlay(SEType.Shoot);
+
             PlayerController player = GetComponent<PlayerController>();
             float angleZ = player.angleZ; //플레이어의 각의정보 
 

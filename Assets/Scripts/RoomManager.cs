@@ -55,6 +55,8 @@ public class RoomManager : MonoBehaviour
             }
 
         }
+
+        SoundManager.soundManager.PlayBGM(BGMType.InGame);
         
     }
 
