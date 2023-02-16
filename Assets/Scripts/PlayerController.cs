@@ -46,6 +46,8 @@ public class PlayerController : MonoBehaviour
         nowAni = downAni;
 
         gameState = "playing";
+
+        hp = PlayerPrefs.GetInt("PlayerHP");
     }
 
   

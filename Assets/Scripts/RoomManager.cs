@@ -2,9 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using System;
 public class RoomManager : MonoBehaviour
 {
+
+    [Serializable]
+    public class RoomData 
+    {
+        public int RoomID = 0;
+        public string RoomTag = "";
+
+    }
+
+    public RoomData ValueData;
+
+
+
     public static int doorNumber = 0;
 
     void Start()
@@ -55,5 +68,13 @@ public class RoomManager : MonoBehaviour
         doorNumber = doorNum;
         SceneManager.LoadScene(sceneName);
         Debug.Log(doorNumber);
+    }
+
+    private void OnDestroy()
+    {
+        string json = JsonUtility.ToJson(ValueData);
+        return;
+
+
     }
 }

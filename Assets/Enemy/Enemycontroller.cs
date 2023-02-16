@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Enemycontroller : MonoBehaviour
 {
+
+    //애너미 정보
+    [HideInInspector]
     public int hp = 2;
     public float speed = 0.5f;
+    [HideInInspector]
     public float reactionDistance = 4.0f; // 플레이어 거리탐지 
-
-
+    
     public string idleAnime = "EnemyDown";
 
     public string upAnime = "EnemyUp";
@@ -20,11 +23,16 @@ public class Enemycontroller : MonoBehaviour
     string nowAnimation = "";
     string oldAnimation = "";
 
+    public SaveData savedata;
+
+
+
     float asixH;
     float asixV;
 
     Rigidbody2D rigi;
 
+    
     bool isActive = false;
 
 
